@@ -9,3 +9,9 @@ Console Application
 - Difference between Async Void & Async Task.
 
 ![demo](TestSolution/Async.Test/result.png)
+
+### 2. Dependency Injection Test
+net core 3.1 Web Application
+- Difference between AddScoped, AddTransient and AddSingleton
+
+![demo](TestSolution/DependencyInjection.Test/result.png)

@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="text-center">
+    <h1 class="display-4">Learn About</h1>
+    <p>Difference between <span class="badge badge-pill badge-primary">AddTransient </span> <span class="badge badge-pill badge-success">AddScoped</span> <span class="badge badge-pill badge-warning">AddSingleton</span></p>
+    
+</div>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Solution</th>
+                <th scope="col">Controller-requested</th>
+                <th scope="col">Own requested</th>
+                <th scope="col">IsEqual</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-primary">
+                <th scope="row">AddTransient</th>
+                <td>@ViewBag.Transient</td>
+                <td>@ViewBag.OwnService.TransientService.GuidId</td>
+                @if (ViewBag.Transient == ViewBag.OwnService.TransientService.GuidId)
+                {
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                            <path d="M13.485 1.431a1.473 1.473 0 0 1 2.104 2.062l-7.84 9.801a1.473 1.473 0 0 1-2.12.04L.431 8.138a1.473 1.473 0 0 1 2.084-2.083l4.111 4.112 6.82-8.69a.486.486 0 0 1 .04-.045z" />
+                        </svg>
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z" />
+                        </svg>
+                    </td>
+                }
+
+            </tr>
+            <tr class="table-success">
+                <th scope="row">AddScoped</th>
+                <td>@ViewBag.Scoped</td>
+                <td>@ViewBag.OwnService.ScopedService.GuidId</td>
+                @if (ViewBag.Scoped == ViewBag.OwnService.ScopedService.GuidId)
+                {
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                            <path d="M13.485 1.431a1.473 1.473 0 0 1 2.104 2.062l-7.84 9.801a1.473 1.473 0 0 1-2.12.04L.431 8.138a1.473 1.473 0 0 1 2.084-2.083l4.111 4.112 6.82-8.69a.486.486 0 0 1 .04-.045z" />
+                        </svg>
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z" />
+                        </svg>
+                    </td>
+                }
+            </tr>
+            <tr class="table-warning">
+                <th scope="row">AddSingleton</th>
+                <td>@ViewBag.Singleton</td>
+                <td>@ViewBag.OwnService.SingletonService.GuidId</td>
+                @if (ViewBag.Singleton == ViewBag.OwnService.SingletonService.GuidId)
+                {
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                            <path d="M13.485 1.431a1.473 1.473 0 0 1 2.104 2.062l-7.84 9.801a1.473 1.473 0 0 1-2.12.04L.431 8.138a1.473 1.473 0 0 1 2.084-2.083l4.111 4.112 6.82-8.69a.486.486 0 0 1 .04-.045z" />
+                        </svg>
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z" />
+                        </svg>
+                    </td>
+                }
+            </tr>
+        </tbody>
+    </table>
+</div>
