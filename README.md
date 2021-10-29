@@ -16,5 +16,5 @@ net core 3.1 Web Application
 
 ![demo](TestSolution/DependencyInjection.Test/result.png)
 
-### 2. Async JS
+### 3. Async JS
 Demo Callback, Promise and Async/Await in javascript
