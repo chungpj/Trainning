@@ -15,3 +15,6 @@ net core 3.1 Web Application
 - Difference between AddScoped, AddTransient and AddSingleton
 
 ![demo](TestSolution/DependencyInjection.Test/result.png)
+
+### 2. Async JS
+Demo Callback, Promise and Async/Await in javascript
